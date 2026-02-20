@@ -1,0 +1,42 @@
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Expo
+.expo/
+.expo-shared/
+assets/
+*.jks
+*.keystore
+
+# Android Studio
+.gradle/
+build/
+local.properties
+.idea/
+*.iml
+*.apk
+*.aar
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*.local
+
+# Temporary files
+*.swp
+*.swo
+*.swn
