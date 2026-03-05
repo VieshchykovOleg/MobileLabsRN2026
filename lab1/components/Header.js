@@ -1,32 +1,36 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function Header() {
   return (
-    <View style={styles.header}>
-      <View style={styles.logoContainer}>
-        <Image
-          source={require('../assets/Логотип_Житомирська політехніка.png')}
-          style={styles.logo}
-          resizeMode="contain"
-        />
+    <SafeAreaView edges={['top']} style={styles.safeArea}>
+      <View style={styles.header}>
+        <View style={styles.logoContainer}>
+          <Image
+            source={require('../assets/Логотип_Житомирська політехніка.png')}
+            style={styles.logo}
+            resizeMode="contain"
+          />
+        </View>
+        <Text style={styles.appTitle}>FirstMobileApp</Text>
       </View>
-      <Text style={styles.appTitle}>FirstMobileApp</Text>
-    </View>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  safeArea: {
+    backgroundColor: '#fff',
+  },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    backgroundColor: '#fff',
     paddingHorizontal: 12,
     paddingVertical: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#e0e0e0',
-    paddingTop: 44,
   },
   logoContainer: {
     flexDirection: 'row',

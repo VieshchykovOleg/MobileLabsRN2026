@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "Lab2App",
+    "slug": "lab2",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.lab2.app"
+    }
+  }
+}
