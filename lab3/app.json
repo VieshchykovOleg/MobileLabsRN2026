@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "GestureClicker",
+    "slug": "lab3",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "android": {
+      "package": "com.lab3.gestureclicker"
+    }
+  }
+}
