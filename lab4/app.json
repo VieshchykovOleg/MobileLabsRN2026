@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "name": "FileManager",
+    "slug": "lab4",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": {
+      "package": "com.lab4.filemanager"
+    }
+  }
+}
