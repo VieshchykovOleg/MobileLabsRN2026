@@ -20,7 +20,7 @@ export default function CustomDrawer({ navigation, state }) {
       {/* Профіль */}
       <View style={styles.profileSection}>
         <View style={styles.avatar}>
-          <Text style={styles.avatarText}>ІІ</Text>
+          <Text style={styles.avatarText}>О</Text>
         </View>
         <Text style={styles.fullName}>Вєщиков Олег Миколайович</Text>
         <Text style={styles.group}>Група: ІПЗ-22-2</Text>

@@ -19,7 +19,6 @@ export default function MainScreen({ navigation }) {
   const [loadingMore, setLoadingMore] = useState(false);
   const [nextId, setNextId] = useState(INITIAL_COUNT + 1);
 
-  // Pull-to-Refresh — імітація мережевого запиту
   const handleRefresh = useCallback(() => {
     setRefreshing(true);
     setTimeout(() => {
