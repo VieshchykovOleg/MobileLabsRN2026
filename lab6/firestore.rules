@@ -1,0 +1,34 @@
+// firestore.rules
+// Правила безпеки Firestore — розмістіть їх у Firebase Console
+// або використайте Firebase CLI: firebase deploy --only firestore:rules
+
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Колекція users: доступ лише до власного документа
+    match /users/{userId} {
+
+      // Читання: лише авторизований користувач може читати свій документ
+      allow read: if request.auth != null && request.auth.uid == userId;
+
+      // Запис (create): лише авторизований, uid у даних має співпадати з auth.uid
+      allow create: if request.auth != null
+                    && request.auth.uid == userId
+                    && request.resource.data.uid == request.auth.uid;
+
+      // Оновлення: лише свій документ, не можна змінити uid і email
+      allow update: if request.auth != null
+                    && request.auth.uid == userId
+                    && request.resource.data.uid == resource.data.uid;
+
+      // Видалення: лише свій документ
+      allow delete: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Всі інші документи — заборонені
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
